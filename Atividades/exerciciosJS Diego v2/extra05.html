@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Extra 05</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <h1 id="resto"></h1>
+    <script>
+        let numero1 = prompt("Digite o primeiro número:");
+        let numero2 = prompt("Digite o segundo número:");
+
+        numero1 = parseInt(numero1);
+        numero2 = parseInt(numero2);
+
+        if (numero2 == 0) {
+            document.getElementById("resultado").innerHTML = "Não é permitida a divisão por 0!";
+        } else {
+            let divisao = numero1 / numero2;
+            let resto = numero1 % numero2
+
+            let fraseDivisao = "A divisão de " + numero1 + " por " + numero2 + " é igual a " + divisao.toFixed(2);
+            let fraseResto = "O resto da divisão de " + numero1 + " por " + numero2 + " é igual a " + resto;
+
+            document.getElementById("resultado").innerHTML = fraseDivisao;
+            document.getElementById("resto").innerHTML = fraseResto;
+        }
+    </script>
+</body>
+
+</html>

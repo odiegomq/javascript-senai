@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img id="imagem">
+    <h1 id="media"></h1>
+    <h1 id="resultado"></h1>
+    <script>
+        let nota1 = prompt("Digite a primeira nota:");
+        let nota2 = prompt("Digite a segunda nota:");
+        let resultado = "";
+        let imagem = "";
+
+        nota1 = parseFloat(nota1);
+        nota2 = parseFloat(nota2);
+
+        let media = (nota1 + nota2) / 2;
+
+        document.getElementById("media").innerHTML = `A média é: ${media}`;
+
+        if (media >= 6) {
+            resultado = "Parabéns você foi aprovado! 😎";
+            imagem = "img/aprovado.png";
+        } else if (media >= 4 && media < 6) {
+            resultado = "Falta pouco, você está de recuperação! 😐";
+            imagem = "img/recuperacao.png";
+        } else {
+            resultado = "Infelizmente, você foi reprovado! 😢";
+            imagem = "img/reprovado.png";
+        }
+
+        document.getElementById("resultado").innerHTML = resultado;
+        document.getElementById("imagem").src = imagem;
+    </script>
+</body>
+
+</html>

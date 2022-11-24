@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <button onclick="media()">Calcule a média</button>
+    <button onclick="reset()">Reset</button>
+    <h1 id="media"></h1>
+    <script>
+        function media() {
+            let numero1 = parseInt(prompt("Digite um número:"));
+            let numero2 = parseInt(prompt("Digite outro número:"));
+
+            let media = (numero1 + numero2) / 2;
+
+            document.getElementById("media").innerHTML = "A média é " + media;
+        }
+
+        function reset() {
+            document.getElementById("media").innerHTML = null;
+        }
+
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+
+        const a = factorial(1); // a gets the value 1
+        const b = factorial(2); // b gets the value 2
+        const c = factorial(3); // c gets the value 6
+        const d = factorial(4); // d gets the value 24
+        const e = factorial(5);
+    </script>
+</body>
+
+</html>

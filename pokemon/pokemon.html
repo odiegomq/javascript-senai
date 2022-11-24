@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokenPokémon</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/pokemon.css">
+</head>
+
+<body>
+    <img src="img/pokemon.png" alt="Logo do pokémon" id="logo">
+    <h2>Escolha o seu pokémon:</h2>
+
+    <form>
+        <input type="radio" id="golem" name="pokemon" onclick="escolher()">
+        <label for="golem">
+            <img src="img/golem.png" alt="Imagem do Golem">
+        </label>
+
+        <input type="radio" id="togepi" name="pokemon" onclick="escolher()">
+        <label for="togepi">
+            <img src="img/togepi.png" alt="Imagem do Togepi">
+        </label>
+
+        <input type="radio" id="scizor" name="pokemon" onclick="escolher()">
+        <label for="scizor">
+            <img src="img/scizor.png" alt="Imagem do Scizor">
+        </label>
+    </form>
+
+    <h2 id="resultado"></h2>
+    <img id="usuario">
+    <strong>X</strong>
+    <img id="computador">
+
+    <script src="js/pokemon.js"></script>
+</body>
+
+</html>

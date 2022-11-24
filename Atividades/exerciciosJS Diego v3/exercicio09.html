@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <script>
+        let nome = prompt("Digite seu nome:");
+        let colesterol = prompt("Digite o valor do seu colesterol LDL (mg/dl):");
+        let resultado = "";
+
+        colesterol = parseInt(colesterol);
+
+        if (colesterol < 100) {
+            resultado = "ótimo";
+        } else if (colesterol >= 100 && colesterol < 130) {
+            resultado = "desejável";
+        } else if (colesterol >= 130 && colesterol < 160) {
+            resultado = "limítrofe";
+        } else if (colesterol >= 160 && colesterol < 190) {
+            resultado = "alto";
+        } else if (colesterol >= 190) {
+            resultado = "muito alto";
+        }
+
+        document.getElementById("resultado").innerHTML = nome + ", o resultado do seu exame de colesterol LDL é " + resultado;
+
+    </script>
+</body>
+
+</html>

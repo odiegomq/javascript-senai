@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Extra 10</title>
+</head>
+
+<body>
+    <h1 id="soma"></h1>
+    <script>
+        let numeroFinal = prompt("Digite o número final:");
+        let soma = 0;
+
+        numeroFinal= parseInt(numeroFinal);
+
+        for (let contador = 1; contador <= numeroFinal; contador++) {
+            if ((contador % 2) == 1) {
+                soma = soma + contador;
+            }
+        }
+
+        document.getElementById("soma").innerHTML = "A soma dos números ímpares entre 1 e " + numeroFinal + " é " + soma;
+    </script>
+</body>
+
+</html>

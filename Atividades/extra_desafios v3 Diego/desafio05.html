@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+</head>
+
+<body>
+    <h1 id="nome"></h1>
+    <h1 id="idade"></h1>
+    <h1 id="sexo"></h1>
+    <h1 id="resultado"></h1>
+    <script>
+        let nome = prompt("Digite o seu nome:");
+        let idade = prompt("Digite a sua idade:");
+        let codgigoSexo = prompt("Digite o seu sexo:");
+        let sexo = "";
+        let resultado = "";
+        let idadeFrase = "";
+
+        idade = parseInt(idade);
+        codgigoSexo = parseInt(codgigoSexo);
+
+        let idadeValida = false;
+        idadeValida = !(idade < 0);
+
+        if (codgigoSexo == 1 && idadeValida) {
+            sexo = "Sexo do participante: Feminino";
+            idadeFrase = "Idade do participante: " + idade;
+
+            if (idade >= 7 && idade <= 9) {
+                resultado = "Categoria do participante: Infantil";
+            } else if (idade >= 10 && idade <= 14) {
+                resultado = "Categoria do participante: Mirim";
+            } else if (idade >= 15 && idade <= 17) {
+                resultado = "Categoria do participante: Júnior";
+            } else if (idade >= 18 && idade <= 24) {
+                resultado = "Categoria do participante: Pro";
+            } else if (idade >= 25 && idade <= 34) {
+                resultado = "Categoria do participante: Super Pro";
+            } else if (idade >= 35 && idade <= 44) {
+                resultado = "Categoria do participante: Master";
+            } else if (idade >= 45 && idade <= 54) {
+                resultado = "Categoria do participante: Super Master";
+            } else if (idade >= 55 && idade <= 64) {
+                resultado = "Categoria do participante: Sênior";
+            } else if (idade >= 65 && idade <= 70) {
+                resultado = "Categoria do participante: Super Sênior";
+            } else if (idade > 70 || idade < 7) {
+                resultado = "Segundo as regras do campeonato, pessoas com idade inferior a 7 anos ou superiores a 70 anos NÃO podem participar!";
+                sexo = "";
+                idadeFrase = "";
+            }
+
+        } else if (codgigoSexo == 2 && idadeValida) {
+            sexo = "Sexo do participante: Masculino";
+            idadeFrase = "Idade do participante: " + idade;
+
+            if (idade >= 7 && idade <= 10) {
+                resultado = "Categoria do participante: Infantil";
+            } else if (idade >= 11 && idade <= 15) {
+                resultado = "Categoria do participante: Mirim";
+            } else if (idade >= 16 && idade <= 20) {
+                resultado = "Categoria do participante: Júnior";
+            } else if (idade >= 21 && idade <= 34) {
+                resultado = "Categoria do participante: Pro";
+            } else if (idade >= 35 && idade <= 54) {
+                resultado = "Categoria do participante: Master";
+            } else if (idade >= 55 && idade <= 70) {
+                resultado = "Categoria do participante: Sênior";
+            } else if (idade > 70 || idade < 7) {
+                resultado = "Segundo as regras do campeonato, pessoas com idade inferior a 7 anos ou superiores a 70 anos NÃO podem participar!";
+                sexo = "";
+                idadeFrase = "";
+            }
+
+        } else {
+            resultado = "Idade e/ou sexo informados inválidos.";
+        }
+
+        document.getElementById("nome").innerHTML = "Nome do participante: " + nome;
+        document.getElementById("idade").innerHTML = idadeFrase;
+        document.getElementById("sexo").innerHTML = sexo;
+        document.getElementById("resultado").innerHTML = resultado;
+    </script>
+</body>
+
+</html>

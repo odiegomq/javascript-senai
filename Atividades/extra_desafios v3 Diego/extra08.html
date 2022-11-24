@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Extra 08</title>
+</head>
+
+<body>
+    <img id="estado">
+    <script>
+        let estado = prompt("Digite o estado da lâmpada:");
+        let imagem = "";
+
+        estado = parseInt(estado);
+
+        if (estado == 0) {
+            imagem = "img/apagada.png";
+        } else if (estado == 1) {
+            imagem = "img/acesa.png";
+        } else {
+            imagem = "img/opcao_invalida.png";
+        }
+
+        document.getElementById("estado").src = imagem
+    </script>
+</body>
+
+</html>

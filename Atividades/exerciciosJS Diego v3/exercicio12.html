@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <script>
+        let mes = prompt("Digite um mês do ano por extenso:");
+        let estacao = "";
+
+        if (mes == "Janeiro" || mes == "Fevereiro" || mes == "Março") {
+            estacao = "verão";
+        } else if (mes == "Abril" || mes == "Maio" || mes == "Junho") {
+            estacao = "outono";
+        } else if (mes == "Julho" || mes == "Agosto" || mes == "Setembro") {
+            estacao = "inverno";
+        } else if (mes == "Outubro" || mes == "Novembro" || mes == "Dezembro") {
+            estacao = "primavera";
+        } else {
+            estacao = "estação inválida";
+        }
+
+        document.getElementById("resultado").innerHTML = "A estação do mês de " + mes + " é " + estacao + ".";
+    </script>
+</body>
+
+</html>

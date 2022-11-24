@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 03</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img id="imagem">
+    <h1 id="resultado"></h1>
+    <script>
+        let precoEtanol = prompt("Digite o preço da etanol (R$):");
+        let precoGasolina = prompt("Digite o preço da gasolina (R$):");
+        let resultado = "";
+        let imagem = "";
+
+        precoEtanol = parseFloat(precoEtanol);
+        precoGasolina = parseFloat(precoGasolina);
+
+        let consumo = precoGasolina * 0.7;
+
+        if (precoEtanol <= consumo) {
+            imagem = "img/etanol.png";
+            resultado = "Compensa abastecer com Álcool!"
+        } else {
+            imagem = "img/gasolina.png";
+            resultado = "Compensa abastecer com Gasolina!"
+        }
+
+        document.getElementById("imagem").src = imagem;
+        document.getElementById("resultado").innerHTML = resultado;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Extra 07</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <script>
+        let num1 = prompt("Digite o primeiro número:");
+        let num2 = prompt("Digite o segundo número:");
+        let codigoOP = prompt("Digite o código da operação:");
+        let operacao = "";
+        let resultado = 0;
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+
+        if (codigoOP == 1) {
+            resultado = (num1 + num2) / 2;
+            operacao = "A média entre os números digitados é " + resultado;
+        } else if (codigoOP == 2) {
+            resultado = num1 - num2;
+            operacao = "A diferença entre os números digitados é " + resultado;
+        } else if (codigoOP == 3) {
+            resultado = num1 * num2;
+            operacao = "A multiplicação entre os números digitados é " + resultado;
+        } else if (codigoOP == 4) {
+            resultado = num1 / num2;
+            operacao = "A divisão do primeiro pelo segundo número digitado é " + resultado.toFixed(2);
+        } else {
+            operacao = "Operação Inválida"
+        }
+        document.getElementById("resultado").innerHTML = operacao;
+    </script>
+</body>
+
+</html>

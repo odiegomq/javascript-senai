@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+
+<body>
+    <h1 id="media"></h1>
+    <script>
+        let nota01 = prompt("Digite a primeira nota:");
+        let nota02 = prompt("Digite a segunda nota:");
+        let nota03 = prompt("Digite a terceira nota:");
+        let nota04 = prompt("Digite a quarta nota:");
+
+        nota01 = parseFloat(nota01);
+        nota02 = parseFloat(nota02);
+        nota03 = parseFloat(nota03);
+        nota04 = parseFloat(nota04);
+
+        let media = (nota01 + nota02 + nota03 + nota04) / 4;
+
+        document.getElementById("media").innerHTML = "A média final das notas é " + media.toFixed(1);
+    </script>
+</body>
+
+</html>

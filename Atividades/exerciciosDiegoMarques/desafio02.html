@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <script>
+        let area = prompt("Digite a área total (m²) a ser revestida:");
+        
+        area = parseInt(area);
+
+        let quilos = (area / 3.7) * 10;
+        let preco = (quilos / 10) * 130;
+
+        let frase = "Serão necessários " + quilos.toFixed(2) + " quilos de pedra mineira e o custo total é R$ " + preco.toFixed(2);
+        
+        document.getElementById("resultado").innerHTML = frase;
+    </script>
+</body>
+
+</html>

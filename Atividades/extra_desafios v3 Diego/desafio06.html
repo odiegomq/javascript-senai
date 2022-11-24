@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+</head>
+
+<body>
+    <img id="imagem">
+    <h1 id="resultado"></h1>
+    <h1 id="operacao"></h1>
+    <h1 id="transacao"></h1>
+    <h1 id="saldoFinal"></h1>
+    <script>
+        let saldoInicial = prompt("Digite o saldo inicial da conta (R$):");
+        let operacao = prompt("Digite a operação desejada:");
+        let saldoFinal = 0;
+        let imagem = "";
+
+        saldoInicial = parseFloat(saldoInicial);
+        operacao = parseInt(operacao);
+
+        let resultado = "";
+        let operacaoFrase = "";
+        let transacaoFrase = "";
+        let saldoFinalFrase = "";
+
+        if (operacao == 1) {
+            let saque = prompt("Digite o valor do saque (R$):");
+
+            saque = parseFloat(saque);
+            if (saque > 0) {
+                if (saque <= saldoInicial) {
+                    saldoFinal = saldoInicial - saque;
+
+                    resultado = "Saldo Inicial: R$ " + saldoInicial.toFixed(2);
+                    operacaoFrase = "Saque";
+                    transacaoFrase = "Valor sacado: R$ " + saque.toFixed(2);
+                    saldoFinalFrase = "Saldo Final: R$ " + saldoFinal.toFixed(2);
+                    imagem = "img/aprovado.png";
+                } else {
+                    imagem = "img/reprovado.png";
+                    resultado = "O valor do saque é maior do que o saldo da conta!";
+                }
+            } else {
+                imagem = "img/reprovado.png";
+                resultado = "O valor do saque não pode ser menor ou igual a zero!";
+            }
+        } else if (operacao == 2) {
+            let deposito = prompt("Digite o valor do depósito (R$):");
+
+            deposito = parseFloat(deposito);
+            if (deposito > 0) {
+                    saldoFinal = saldoInicial + deposito;
+
+                    resultado = "Saldo Inicial: R$ " + saldoInicial.toFixed(2);
+                    operacaoFrase = "Depósito";
+                    transacaoFrase = "Valor depositado: R$ " + deposito.toFixed(2);
+                    saldoFinalFrase = "Saldo Final: R$ " + saldoFinal.toFixed(2);
+                    imagem = "img/aprovado.png";
+            } else {
+                imagem = "img/reprovado.png";
+                resultado = "O valor do depósito não pode ser menor ou igual a zero!";
+            }
+        } else {
+            imagem = "img/invalido.png";
+            resultado = "Operação Inválida.";
+        }
+
+        document.getElementById("imagem").src = imagem;
+        document.getElementById("resultado").innerHTML = resultado;
+        document.getElementById("operacao").innerHTML = operacaoFrase;
+        document.getElementById("transacao").innerHTML = transacaoFrase;
+        document.getElementById("saldoFinal").innerHTML = saldoFinalFrase;
+    </script>
+</body>
+
+</html>
